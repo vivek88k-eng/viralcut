@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+}
+ main {
+  min-height: 100vh;
+
+  background-color: #ffffff;
+
+  background-image: radial-gradient(
+    rgba(10, 10, 10, 0.11) 1px,
+    transparent 1px
+  );
+
+  background-size: 16px 16px;
+}
