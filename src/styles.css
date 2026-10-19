@@ -1,4 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+}
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    
+}
+body {
+    overflow-y: auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FBFCF8;
+}
+/* Hide scrollbar but keep scrolling enabled */
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Hide scrollbar across the entire page */
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
 }

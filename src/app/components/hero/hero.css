@@ -19,7 +19,7 @@
    BACKGROUND
    ========================= */
 
-.hero-pattern {
+/* .hero-pattern {
   position: absolute;
   top: 75px;
   left: 0;
@@ -83,7 +83,7 @@
       transparent 63px,
       transparent 112px
     );
-}
+} */
 
 
 /* =========================
@@ -163,11 +163,11 @@
   margin: 0;
 
   font-size: clamp(48px, 5.3vw, 76px);
-  line-height: 0.98;
+  line-height: 1.09;
 
-  letter-spacing: -4px;
+  letter-spacing: -2px;
 
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .orange-text {
@@ -179,10 +179,10 @@
 
   margin: 28px auto 0;
 
-  font-size: 20px;
-  line-height: 1.45;
+  font-size: 18px;
+  line-height: 1.6;
 
-  font-weight: 450;
+  font-weight: 400;
 
   color: #222222;
 }
@@ -643,28 +643,23 @@
   /* Mobile cards */
 
   .hero-cards {
-    width: calc(100% - 18px);
+  width: calc(100% - 30px);
+  height: auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  perspective: 1000px;
+}
 
-    height: 310px;
-
-    margin-top: 70px;
-
-    gap: 0;
-
-    perspective: 1000px;
-  }
-
-  .hero-card {
-    width: 33.33%;
-
-    height: 300px;
-
-    flex: 0 0 33.33%;
-
-    padding: 5px;
-
-    border-radius: 17px;
-  }
+.hero-card {
+  width: min(330px, 100%);
+  height: 430px;
+  flex: 0 0 auto;
+  padding: 7px;
+  border-radius: 20px;
+}
 
   .hero-video {
     border-radius: 12px;

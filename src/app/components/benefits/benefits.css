@@ -1,0 +1,975 @@
+:host {
+  display: block;
+}
+
+.benefits {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 100px 60px;
+  background: rgb(255, 253, 250);
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+  position: relative;
+  overflow: clip;
+}
+
+.benefits-header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.benefits-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px 14px 6px 12px;
+  border: 2px solid rgb(232, 232, 232);
+  border-radius: 100px;
+  background: rgb(255, 255, 255);
+  color: rgb(89, 89, 89);
+  font-size: 17px;
+  line-height: 25.5px;
+  font-weight: 500;
+  backdrop-filter: blur(12px);
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.benefits-label-icon {
+  font-size: 13px;
+} 
+
+.benefits-header h2 {
+  width: 630px;
+  max-width: 100%;
+  margin: 0;
+  color: rgb(10, 10, 10);
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.benefits-layout {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr 1fr;
+  grid-template-rows: 300px 190px 190px 190px;
+  gap: 20px;
+
+  grid-template-areas:
+    "growth video video"
+    "growth platforms creators"
+    "revenue platforms turnaround"
+    "revisions platforms turnaround";
+}
+
+.benefit-card {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #eeeeeb;
+  border-radius: 17px;
+  background: #fff;
+}
+
+
+
+/* LEFT TOP — GROWTH CHART */
+
+.growth-card {
+  grid-area: growth;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  border: 3px solid #f5f5f5;
+  border-radius: 24px;
+  background: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  height: 524px;
+}
+
+
+.growth-card h3 {
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 30px;
+  line-height: 39px;
+  letter-spacing: normal;
+  font-weight: 500;
+  color: rgb(10, 10, 10);
+  box-sizing: border-box;
+}
+
+.growth-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 212.359px;
+  height: 86px;
+  padding: 0;
+  margin-top: 28px;
+  position: relative;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.growth-stats span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  padding: 7px 14px 7px 12px;
+  border-radius: 10px;
+  background: rgb(242, 242, 242);
+  color: rgba(13, 13, 13, 0.6);
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.growth-stats svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: inline-block;
+  fill: rgba(13, 13, 13, 0.6);
+}
+
+.growth-chart {
+  width: 100%;
+  height: 215px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+  flex: none;
+  mask: linear-gradient(
+    0deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 24%
+  );
+}
+
+.growth-bar {
+  position: relative;
+  flex: none;
+  width: 28px;
+  height: var(--bar-height);
+  border-radius: 100px;
+  background: rgba(13, 13, 13, 0.15);
+}
+
+.growth-bar-highlight {
+  background: rgba(13, 13, 13, 0.15);
+}
+
+.growth-bar-highlight span {
+  position: absolute;
+  top: 2px;
+  left: auto;
+  right: 35px;
+  transform: translateX(0) rotate(-5deg);
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: rgb(242, 135, 19);
+  color: #fff;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  white-space: nowrap;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+/* WIDE VIDEO CARD */
+.video-card {
+  grid-area: video;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 24px;
+  background: #fff;
+}
+
+/* Actual video */
+.video-thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 32px;
+  background: transparent;
+}
+
+/* Bottom gradient overlay */
+.video-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  height: 103px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 13, 13, 0) 0%,
+    rgba(13, 13, 13, 0.8) 100%
+  );
+}
+
+.video-overlay h3 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 39px;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+/* LEFT MIDDLE — REVENUE */
+
+.revenue-card {
+  grid-area: revenue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+}
+
+.revenue-icon {
+  width: 31px;
+  height: 31px;
+  margin-bottom: 8px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f4f4f2;
+  font-size: 14px;
+}
+
+.revenue-card h3 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+}
+
+.revenue-card p {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 9px;
+}
+
+
+/* RIGHT MIDDLE — CREATORS */
+
+.creators-card {
+  grid-area: creators;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+}
+
+.creator-avatars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+  min-height: 44px;
+}
+
+.creator-avatar {
+  width: 39px;
+  height: 39px;
+  margin-left: -5px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  animation: avatar-float 3s ease-in-out infinite;
+}
+
+.creator-avatar:first-child {
+  margin-left: 0;
+}
+
+.creator-avatar-one {
+  background: #6f8b58;
+}
+
+.creator-avatar-two {
+  background: #c28a6b;
+  animation-delay: -1s;
+}
+
+.creator-avatar-three {
+  background: #756b9b;
+  animation-delay: -2s;
+}
+
+.creators-card h3 {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  letter-spacing: -0.2px;
+}
+
+/* LEFT BOTTOM — REVISIONS */
+
+.revisions-card {
+  grid-area: revisions;
+  background: #080808;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  border-color: #080808;
+}
+
+.revisions-card h3 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+}
+
+.revisions-card h3 span {
+  margin-right: 4px;
+  font-size: 17px;
+}
+
+.revisions-card p {
+  max-width: 260px;
+  margin: 9px 0 0;
+  color: #d1d1d1;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+/* RIGHT BOTTOM — CLOCK */
+
+.turnaround-card {
+  grid-area: turnaround;
+  padding: 18px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.turnaround-card h3 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: -0.5px;
+}
+
+.turnaround-card p {
+  margin: 8px 0 0;
+  color: #777;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.clock-face {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 3px;
+  flex-shrink: 0;
+  border: 1px solid #e9e9e6;
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      #e6e6e2 0deg 1deg,
+      transparent 1deg 30deg
+    );
+  box-shadow: inset 0 0 0 7px #fafaf8;
+}
+
+.clock-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 2px;
+  border-radius: 4px;
+  transform-origin: bottom center;
+}
+
+.clock-hand-hour {
+  height: 25px;
+  background: #252525;
+  transform: translateX(-50%) rotate(80deg);
+}
+
+.clock-hand-minute {
+  height: 33px;
+  background: #f28a18;
+  transform: translateX(-50%) rotate(210deg);
+}
+
+.clock-pin {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: #222;
+  transform: translate(-50%, -50%);
+}
+
+/* ANIMATIONS */
+
+@keyframes avatar-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.revenue-revisions-wrap {
+  grid-area: auto;
+  grid-column: 1;
+  grid-row: 3 / 5;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+}
+
+.revenue-revisions-wrap .revenue-card,
+.revenue-revisions-wrap .revisions-card {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.revenue-card .revenue-icon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background-color: rgb(242, 242, 242);
+}
+
+.revenue-card .revenue-icon svg {
+  width: 28px;
+  height: 29px;
+  display: block;
+  fill: rgba(13, 13, 13, 0.6);
+  flex-shrink: 0;
+}
+.revenue-card .revenue-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.revenue-card .revenue-text h3 {
+  margin: 0;
+  font-family: "Inter Display", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 39px;
+  color: rgb(10, 10, 10);
+  text-align: center;
+}
+.revenue-card .revenue-text p {
+  margin: 0;
+  font-family: "Inter Display", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25.5px;
+  color: rgba(13, 13, 13, 0.7);
+  text-align: center;
+}
+/* Revenue card border */
+.revenue-card {
+  border: 3px solid rgb(245, 245, 245);
+  border-radius: 24px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Revenue card spacing */
+.revenue-card {
+  padding: 32px 24px;
+}
+
+/* Growth aur Revenue cards ke beech gap */
+.revenue-revisions-wrap {
+  margin-top: 8px;
+}
+.revenue-revisions-wrap .revenue-card {
+  flex: 0 0 233px;
+  min-height: 233px;
+  width: 100%;
+}
+
+.revenue-revisions-wrap .revisions-card {
+  flex: 0 0 233px;
+  min-height: 233px;
+  width: 100%;
+}
+.revisions-card {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 24px;
+  border: 3px solid rgb(245, 245, 245);
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+
+.revisions-card h3 {
+  margin: 0;
+  font-family: "Inter Display", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 33.6px;
+  color: #fff;
+  text-align: center;
+}
+.revisions-card p {
+  margin: 0;
+  font-family: "Inter Display", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25.5px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  width: 372px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* TABLET */
+
+@media (max-width: 700px) {
+  .benefits {
+    padding: 75px 18px 90px;
+  }
+
+  .benefits-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 135px 210px 135px 180px;
+    grid-template-areas:
+      "growth video"
+      "revenue creators"
+      "platforms platforms"
+      "revisions turnaround"
+      "revisions turnaround";
+    gap: 12px;
+  }
+
+  .video-caption {
+    font-size: 12px;
+  }
+
+  .platforms-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+
+  .platforms-fade {
+    top: 45%;
+    height: 18%;
+  }
+
+  .platforms-description {
+    margin-top: auto;
+  }
+
+  .clock-face {
+    width: 80px;
+    height: 80px;
+  }
+}
+/* =====================================
+   SOCIAL PLATFORMS CARD
+===================================== */
+
+.platforms-card {
+  grid-area: platforms;
+  width: 394px;
+  height: 700px;
+  box-sizing: border-box;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  background: #fff;
+  border: 3px solid #f5f5f5;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* VISUAL AREA */
+
+.platforms-visual {
+  width: 100%;
+  height: 450px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* ICON COLUMNS */
+
+.platform-ticker {
+  width: 76px;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.ticker-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ICONS */
+
+.platform-icon {
+  width: 76px;
+  height: 54px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 100px;
+  padding: 2px;
+  color: #222;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* ANIMATION */
+
+.ticker-up .ticker-track {
+  animation: platformsMoveUp 35s linear infinite;
+}
+
+.ticker-down .ticker-track {
+  animation: platformsMoveDown 35s linear infinite;
+}
+
+@keyframes platformsMoveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes platformsMoveDown {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.platforms-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    #fff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* BOTTOM WHITE FADE — BEHIND DOTS */
+
+.platforms-visual::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    #fff 75%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* DOTS — FOUR ROWS */
+
+.platforms-dots {
+  position: absolute;
+  width: 298px;
+  height: 60px;
+  left: 50%;
+  bottom: -39px;
+  transform: translateX(-50%) ;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 14px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.platforms-dots-row {
+  width: 100%;
+  height: 4px;
+  flex: 0 0 4px;
+  background-image: radial-gradient(
+    circle,
+    #d0d0d0 1.5px,
+    transparent 1.8px
+  );
+  background-size: 16px 16px;
+  background-position: left center;
+  background-repeat: repeat-x;
+}
+
+/* CARD TEXT */
+
+.platforms-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.platforms-description h3 {
+  width: 100%;
+  margin: 0;
+  color: #0d0d0d;
+  font-family: "Inter Display", Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.platforms-description p {
+  width: 100%;
+  margin: 0;
+  color: rgba(13, 13, 13, 0.7);
+  font-family: "Inter Display", Inter, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* SMALL MOBILE */
+
+@media (max-width: 420px) {
+  .benefits {
+    padding: 65px 15px 75px;
+  }
+
+  .benefits-header {
+    margin-bottom: 32px;
+  }
+
+  .benefits-header h2 {
+    font-size: 32px;
+    letter-spacing: -1.3px;
+  }
+
+  .benefits-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 205px 120px 205px 130px 155px;
+    gap: 9px;
+  }
+
+  .benefit-card {
+    border-radius: 13px;
+  }
+
+  .growth-card {
+    padding: 17px 10px 12px;
+  }
+
+  .growth-card h3 {
+    font-size: 12px;
+  }
+
+  .growth-stats span {
+    font-size: 7px;
+  }
+
+  .growth-chart {
+    gap: 5px;
+    height: 100px;
+  }
+
+  .video-caption {
+    font-size: 10px;
+  }
+
+  .platforms-card {
+    padding: 18px 12px;
+  }
+
+  .platforms-grid {
+    gap: 9px;
+  }
+
+  .platforms-grid span {
+    width: 29px;
+    height: 29px;
+  }
+
+  .platforms-description h3 {
+    font-size: 13px;
+  }
+
+  .creators-card h3,
+  .turnaround-card h3 {
+    font-size: 12px;
+  }
+
+  .creator-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .revisions-card {
+    padding: 10px;
+  }
+
+  .revisions-card h3 {
+    font-size: 12px;
+  }
+
+  .turnaround-card {
+    padding: 14px 7px 10px;
+  }
+
+  .turnaround-card p {
+    font-size: 8px;
+  }
+
+  .clock-face {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .creator-avatar {
+    animation: none;
+  }
+
+  .benefit-card {
+    transition: none;
+  }
+}
